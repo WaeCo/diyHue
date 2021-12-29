@@ -252,6 +252,8 @@ class Light():
             self.state["colormode"] = "ct"
         elif ("hue" in state or "sat" in state) and "hue" in self.state:
             self.state["colormode"] = "hs"
+        else:
+            self.state["colormode"] = "unknown"
 
     def setV1State(self, state):
         if "lights" not in state:
